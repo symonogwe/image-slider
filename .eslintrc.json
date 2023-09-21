@@ -9,7 +9,8 @@
     "sourceType": "module"
   },
   "rules": {
-    "quotes": ["error", "double"],
-    "no-unused-vars": "warn"
+    "quotes": ["warn", "double"],
+    "no-unused-vars": "warn",
+    "prefer-destructuring": "warn"
   }
 }

@@ -29,8 +29,33 @@ body {
 
 #hero-section {
   height: 100vh;
-  background: url(/src/Assets/lioness.jpg) no-repeat center center/cover;
+  /* background: url(/src/Assets/lioness.jpg) no-repeat center center/cover; */
   position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* Hero images url's */
+.lioness-src {
+  background: url(/src/Assets/lioness.jpg) no-repeat center center/cover;
+}
+
+.bear-src {
+  background: url(/src/Assets/bear.jpg);
+}
+
+.deer-src {
+  background: url(/src/Assets/deer.jpg);
+}
+
+.elephant-src {
+  background: url(/src/Assets/elephant.jpg);
+}
+
+.rhino-src {
+  background: url(/src/Assets/rhino.jpg);
 }
 
 nav {
