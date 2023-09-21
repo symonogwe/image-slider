@@ -6,23 +6,22 @@ import lionessSrc from "./Assets/lioness.jpg";
 import bearSrc from "./Assets/bear.jpg";
 import deerSrc from "./Assets/deer.jpg";
 import elephantSrc from "./Assets/elephant.jpg";
-import rhinoSrc from "./Assets/rhino.jpg";
-
+import zebraSrc from "./Assets/zebra.jpg";
 // Hero src
 const lioness = lionessSrc;
 const bear = bearSrc;
 const deer = deerSrc;
 const elephant = elephantSrc;
-const rhino = rhinoSrc;
+const zebra = zebraSrc;
 
-const heroSrcArray = [lioness, bear, deer, elephant, rhino];
+const heroSrcArray = [lioness, bear, deer, elephant, zebra];
 
 const heroClassArray = [
   "lioness-src",
   "bear-src",
   "deer-src",
   "elephant-src",
-  "rhino-src",
+  "zebra-src",
 ];
 
 // Next Image functionality
@@ -58,3 +57,6 @@ nextIcon.addEventListener("click", nextImage);
 // previous Image functionality
 const previousIcon = document.querySelector(".previous-icon");
 previousIcon.src = previousIconSrc;
+
+// functionality to automatically change image
+const autoSlide = setInterval(nextImage, 5000);
