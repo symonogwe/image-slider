@@ -25,6 +25,25 @@ const heroClassArray = [
   "zebra-src",
 ];
 
+// position buttons
+const positionBtn1 = document.querySelector(".position-btn-1");
+const positionBtn2 = document.querySelector(".position-btn-2");
+const positionBtn3 = document.querySelector(".position-btn-3");
+const positionBtn4 = document.querySelector(".position-btn-4");
+const positionBtn5 = document.querySelector(".position-btn-5");
+
+const positionBtnArr = [
+  positionBtn1,
+  positionBtn2,
+  positionBtn3,
+  positionBtn4,
+  positionBtn5,
+];
+
+function clearPositionBtn() {
+  positionBtnArr.forEach((btn) => btn.classList.remove("active-position-btn"));
+}
+
 // Next Image functionality
 function nextImage() {
   const heroElement = document.getElementById("hero-section");
@@ -38,11 +57,19 @@ function nextImage() {
   if (currentImgSrc === heroSrcArray[4]) {
     heroElement.classList.remove(heroClassArray[4]);
     heroElement.classList.add(heroClassArray[0]);
+
+    // positionBtnArr[4].classList.remove("active-position-btn");
+    clearPositionBtn();
+    positionBtnArr[0].classList.add("active-position-btn");
   } else {
     for (let i = 0; i < 4; i++) {
       if (currentImgSrc === heroSrcArray[i]) {
         heroElement.classList.remove(heroClassArray[i]);
         heroElement.classList.add(heroClassArray[i + 1]);
+
+        // positionBtnArr[i].classList.remove("active-position-btn");
+        clearPositionBtn();
+        positionBtnArr[i + 1].classList.add("active-position-btn");
       }
     }
   }
@@ -66,11 +93,19 @@ function previousImage() {
   if (currentImgSrc === heroSrcArray[0]) {
     heroElement.classList.remove(heroClassArray[0]);
     heroElement.classList.add(heroClassArray[4]);
+
+    // positionBtnArr[0].classList.remove("active-position-btn");
+    clearPositionBtn();
+    positionBtnArr[4].classList.add("active-position-btn");
   } else {
     for (let i = 1; i <= 4; i++) {
       if (currentImgSrc === heroSrcArray[i]) {
         heroElement.classList.remove(heroClassArray[i]);
         heroElement.classList.add(heroClassArray[i - 1]);
+
+        // positionBtnArr[i].classList.remove("active-position-btn");
+        clearPositionBtn();
+        positionBtnArr[i - 1].classList.add("active-position-btn");
       }
     }
   }
@@ -82,4 +117,4 @@ previousIcon.src = previousIconSrc;
 previousIcon.addEventListener("click", previousImage);
 
 // functionality to automatically change image
-const autoSlide = setInterval(nextImage, 5000);
+const autoSlide = setInterval(nextImage, 7000);
