@@ -16,6 +16,7 @@ const zebra = zebraSrc;
 
 const heroSrcArray = [lioness, bear, deer, elephant, zebra];
 
+// Hero class array
 const heroClassArray = [
   "lioness-src",
   "bear-src",

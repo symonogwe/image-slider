@@ -60,13 +60,13 @@ body {
 }
 
 nav {
-  height: 5%;
+  height: 8%;
   display: flex;
   justify-content: space-between;
 }
 
 .left-nav {
-  width: 15%;
+  width: 25%;
   display: grid;
   grid-template-columns: 1fr 2fr;
   align-items: center;
@@ -76,18 +76,23 @@ nav {
 
 .logo {
   width: var(--logo-width);
+  filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(51deg)
+    brightness(107%) contrast(101%);
 }
 
 .logo-name {
   font-family: var(--base-header-ff);
-  font-size: calc(0.7rem + 0.5vw);
+  font-size: calc(1rem + 0.8vw);
   letter-spacing: 1px;
-  color: var(--sub-color);
+  /* color: var(--sub-color); */
+  color: #fff;
+  justify-self: start;
 }
 
 .right-nav {
   display: grid;
   justify-items: center;
+  align-items: center;
   margin: var(--base-margin);
 }
 
@@ -115,7 +120,7 @@ nav {
 .nav-container {
   position: absolute;
   left: 100%;
-  top: 5%;
+  top: 6.5%;
   display: grid;
   grid-template-rows: repeat(5, 1fr);
   gap: 10px;
@@ -136,7 +141,8 @@ nav {
 
 .nav-container a {
   text-decoration: none;
-  color: var(--sub-color);
+  /* color: var(--sub-color); */
+  color: #fff;
   margin: var(--base-margin);
   font-size: calc(0.8rem + 0.8vw);
   width: 100%;
@@ -193,4 +199,10 @@ nav {
   width: max(40px, 70%);
   filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(51deg)
     brightness(107%) contrast(101%);
+}
+
+.previous-icon:hover,
+.next-icon:hover {
+  scale: 1.6;
+  transition: 300ms;
 }
