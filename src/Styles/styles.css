@@ -167,6 +167,50 @@ nav {
   transform: rotate(45deg) translate(-7px, -7px);
 }
 
+.hero-content-container {
+  /* border: 1px solid red; */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  padding: var(--base-padding);
+  display: grid;
+  justify-items: center;
+  opacity: 0.8;
+}
+
+.hero-h1 {
+  color: var(--base-color);
+  font-family: var(--base-header-ff);
+  letter-spacing: 2.6px;
+  font-size: calc(1.7rem + 2vw);
+  color: #fff;
+}
+
+.hero-p {
+  /* color: var(--text-color); */
+  /* color: var(--sub-base-color); */
+  color: khaki;
+  font-family: var(--base-paragraph-ff);
+  font-size: calc(0.8rem + 0.7vw);
+  font-weight: 900;
+  max-width: 45ch;
+  text-align: center;
+  margin-top: 0.4em;
+}
+
+.join-us-btn {
+  padding: 0.6em 3em;
+  background-color: var(--sub-base-color);
+  border: none;
+  border-radius: 0.5em;
+  color: white;
+  font-size: calc(0.7rem + 0.6vw);
+  margin-top: 1em;
+  cursor: pointer;
+  /* opacity: 0.8; */
+}
+
 .previous-img-btn {
   position: absolute;
   left: 0;
