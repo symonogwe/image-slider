@@ -130,4 +130,4 @@ previousIcon.src = previousIconSrc;
 previousIcon.addEventListener("click", previousImage);
 
 // functionality to automatically change image
-const autoSlide = setInterval(nextImage, 7000);
+const autoSlide = setInterval(nextImage, 10000);
