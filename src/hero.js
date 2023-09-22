@@ -44,6 +44,23 @@ function clearPositionBtn() {
   positionBtnArr.forEach((btn) => btn.classList.remove("active-position-btn"));
 }
 
+function scrollToClicked(e) {
+  const heroElement = document.getElementById("hero-section");
+
+  const { target } = e;
+  const targetIndex = positionBtnArr.indexOf(target);
+
+  heroClassArray.forEach((c) => {
+    if (heroElement.classList.contains(c)) heroElement.classList.remove(c);
+  });
+
+  heroElement.classList.add(heroClassArray[targetIndex]);
+  clearPositionBtn();
+  positionBtnArr[targetIndex].classList.add("active-position-btn");
+}
+
+positionBtnArr.forEach((btn) => btn.addEventListener("click", scrollToClicked));
+
 // Next Image functionality
 function nextImage() {
   const heroElement = document.getElementById("hero-section");
@@ -58,7 +75,6 @@ function nextImage() {
     heroElement.classList.remove(heroClassArray[4]);
     heroElement.classList.add(heroClassArray[0]);
 
-    // positionBtnArr[4].classList.remove("active-position-btn");
     clearPositionBtn();
     positionBtnArr[0].classList.add("active-position-btn");
   } else {
@@ -67,7 +83,6 @@ function nextImage() {
         heroElement.classList.remove(heroClassArray[i]);
         heroElement.classList.add(heroClassArray[i + 1]);
 
-        // positionBtnArr[i].classList.remove("active-position-btn");
         clearPositionBtn();
         positionBtnArr[i + 1].classList.add("active-position-btn");
       }
@@ -94,7 +109,6 @@ function previousImage() {
     heroElement.classList.remove(heroClassArray[0]);
     heroElement.classList.add(heroClassArray[4]);
 
-    // positionBtnArr[0].classList.remove("active-position-btn");
     clearPositionBtn();
     positionBtnArr[4].classList.add("active-position-btn");
   } else {
@@ -103,7 +117,6 @@ function previousImage() {
         heroElement.classList.remove(heroClassArray[i]);
         heroElement.classList.add(heroClassArray[i - 1]);
 
-        // positionBtnArr[i].classList.remove("active-position-btn");
         clearPositionBtn();
         positionBtnArr[i - 1].classList.add("active-position-btn");
       }

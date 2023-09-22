@@ -234,6 +234,14 @@ nav {
   transition: background-color 400ms ease-in-out;
 }
 
+.position-btn-1:hover,
+.position-btn-2:hover,
+.position-btn-3:hover,
+.position-btn-4:hover,
+.position-btn-5:hover {
+  scale: 1.2;
+}
+
 .active-position-btn {
   background-color: var(--sub-base-color);
 }
